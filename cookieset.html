@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cookie Example</title>
+  </head>
+  <body>
+    <h1>Cookie Example</h1>
+    <script>
+      function setCookie() {
+        var cookieName = "test";
+        var cookieValue = "12345";
+        var expires = new Date();
+        expires.setTime(expires.getTime() + (24 * 60 * 60 * 1000)); 
+        document.cookie = cookieName + "=" + cookieValue + ";expires=" + expires.toUTCString() + ";path=/";
+        console.log("Cookie set: " + document.cookie); 
+      }
+      setCookie();
+    </script>
+  </body>
+</html>
